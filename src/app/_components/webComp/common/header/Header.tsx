@@ -12,6 +12,8 @@ export default function Header() {
             src={logoDark}
             width={410}
             height={52}
+            fetchPriority="high"
+            loading="eager"
             className="logo mb-4 w-full max-w-60 object-contain transition duration-300 ease-in md:mb-0 xl:max-w-70 2xl:max-w-102.5"
             alt="logo"
           />
