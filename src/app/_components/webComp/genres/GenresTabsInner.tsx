@@ -20,7 +20,7 @@ export default function GenresTabsInner({ genres }: Props) {
       {(activeIndex, contentRefs) => (
         <>
           {GenresData?.map(
-            ({ id, title, info, thumbnail, category }, index) => (
+            ({ id, title, info, thumbnail, category, blurDataURL }, index) => (
               <Activity
                 key={id}
                 mode={activeIndex === index ? "visible" : "hidden"}
@@ -60,6 +60,8 @@ export default function GenresTabsInner({ genres }: Props) {
                       src={thumbnail}
                       width={670}
                       height={435}
+                      placeholder="blur"
+                      blurDataURL={blurDataURL}
                       sizes="(max-width: 575px) 320px, (max-width: 991px) 100vw, 670px"
                       className="reflect-below mx-auto h-auto w-full max-w-167.5 object-contain"
                       alt={`image-${category}`}
